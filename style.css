@@ -1,0 +1,79 @@
+:root {
+  --pink-main: #ff4d8d;
+  --pink-soft: #ffc2d1;
+  --pink-bg: #fff0f5;
+  --text-dark: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--pink-soft), var(--pink-bg));
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  padding: 40px;
+  animation: fadeIn 1.2s ease;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  color: var(--text-dark);
+  margin-bottom: 40px;
+}
+
+h1 span {
+  color: var(--pink-main);
+  font-weight: 700;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+button {
+  padding: 15px 35px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.yes-button {
+  background: var(--pink-main);
+  color: white;
+  box-shadow: 0 12px 30px rgba(255, 77, 141, 0.35);
+}
+
+.yes-button:hover {
+  transform: scale(1.08);
+}
+
+.no-button {
+  background: rgb(54, 53, 53);
+  color: var(--text-dark);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
